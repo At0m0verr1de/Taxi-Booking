@@ -2,9 +2,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
-import java.util.*;
 
-public class AdminHome implements ActionListener, Runnable {
+public class AdminHome implements ActionListener {
     JFrame f;
     JButton b1, b2, b3, b4, b5, b6, b7, b8, b9;
     Utility util = new Utility();
@@ -30,7 +29,7 @@ public class AdminHome implements ActionListener, Runnable {
         b4.setBounds(200, 180, 140, 120);
         f.add(b4);
 
-        b5 = new JButton("Add Cab Type"); // Go back to App Home
+        b5 = new JButton("Driver Update"); // Go back to App Home
         b5.setBounds(350, 50, 140, 120);
         f.add(b5);
 
@@ -47,7 +46,7 @@ public class AdminHome implements ActionListener, Runnable {
 
         f.getContentPane();
         f.setVisible(true);
-        f.setSize(390, 350);
+        f.setSize(550, 350);
     }
 
     public void actionPerformed(ActionEvent ee) {
@@ -75,16 +74,10 @@ public class AdminHome implements ActionListener, Runnable {
         } else if (ee.getSource() == b4) {
             new AddDriver();
         } else if (ee.getSource() == b5) {
-            new AddCabType();
+            new DeleteDriver();
         } else if (ee.getSource() == b6) {
             f.dispose();
             new App();
         }
-    }
-
-    @Override
-    public void run() {
-        // TODO Auto-generated method stub
-
     }
 }

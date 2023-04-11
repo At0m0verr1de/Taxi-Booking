@@ -1,8 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import java.sql.*;
-import java.util.*;
 
 public class UserLogin implements ActionListener {
     JFrame f;
@@ -81,7 +79,7 @@ public class UserLogin implements ActionListener {
                 } else {
                     if (util.Login(email, password1, "user") == 1) {
                         f.dispose();
-                        // new UserHome();
+                        new UserHome();
                     }
                 }
 

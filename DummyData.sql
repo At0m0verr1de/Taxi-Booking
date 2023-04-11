@@ -1,27 +1,67 @@
-INSERT INTO User (name, email, phone_number, password, authority) VALUES
-('John Doe', 'johndoe@gmail.com', '123-456-7890', 'password123', 'admin'),
-('Jane Smith', 'janesmith@gmail.com', '987-654-3210', 'password456', 'user'),
-('Bob Johnson', 'bobjohnson@yahoo.com', '555-555-5555', 'password789', 'user');
+INSERT INTO User (name, email, phone_number, password, authority)
+VALUES 
+    ('John Doe', 'johndoe@example.com', '1234567890', 'password1', 'user'),
+    ('Jane Doe', 'janedoe@example.com', '0987654321', 'password2', 'user'),
+    ('Bob Smith', 'bobsmith@example.com', '5555555555', 'password3', 'admin'),
+    ('Sara Johnson', 'sarajohnson@example.com', '7777777777', 'password4', 'user'),
+    ('Tom Lee', 'tomlee@example.com', '1111111111', 'password5', 'user'),
+    ('Emily Liu', 'emilyliu@example.com', '2222222222', 'password6', 'user'),
+    ('David Chen', 'davidchen@example.com', '3333333333', 'password7', 'user'),
+    ('Karen Wang', 'karenwang@example.com', '4444444444', 'password8', 'user'),
+    ('Alex Brown', 'alexbrown@example.com', '6666666666', 'password9', 'user'),
+    ('Sarah Park', 'sarahpark@example.com', '9999999999', 'password10', 'user');
 
-INSERT INTO Car_Type (passengers_capacity) VALUES
-(4),
-(6),
-(8);
+INSERT INTO Car_Type (passengers_capacity)
+VALUES 
+    (2),
+    (4),
+    (6),
+    (8),
+    (10),
+    (12),
+    (14),
+    (16),
+    (18),
+    (20);
 
-INSERT INTO Car_Type_Price (type_id, price) VALUES
-(1, 50),
-(2, 75),
-(3, 100);
+INSERT INTO Car_Type_Price (type_id, price)
+VALUES 
+    (1, 50),
+    (2, 80),
+    (3, 100),
+    (4, 120),
+    (5, 150),
+    (6, 180),
+    (7, 200),
+    (8, 220),
+    (9, 250),
+    (10, 300);
 
-INSERT INTO Driver (type_id, name, email, phone_number, license_plate, status) VALUES
-(1, 'David Lee', 'davidlee@gmail.com', '555-123-4567', 'ABC123', 'available'),
-(2, 'Lisa Kim', 'lisakim@gmail.com', '555-234-5678', 'DEF456', 'available'),
-(3, 'Mike Chen', 'mikechen@gmail.com', '555-345-6789', 'GHI789', 'available');
+INSERT INTO Driver (type_id, name, email, phone_number, license_plate, status)
+VALUES 
+    (1, 'Mark Johnson', 'markjohnson@example.com', '1234567890', 'AB123', 'available'),
+    (2, 'Anna Smith', 'annasmith@example.com', '0987654321', 'CD456', 'busy'),
+    (3, 'Jake Lee', 'jakelee@example.com', '5555555555', 'EF789', 'available'),
+    (4, 'Emily Chen', 'emilychen@example.com', '7777777777', 'GH012', 'available'),
+    (5, 'Sophie Kim', 'sophiekim@example.com', '1111111111', 'IJ345', 'busy'),
+    (1, 'Mike Brown', 'mikebrown@example.com', '2222222222', 'KL678', 'available'),
+    (3, 'Lily Wang', 'lilywang@example.com', '3333333333', 'MN901', 'available'),
+    (4, 'Harry Park', 'harrypark@example.com', '4444444444', 'OP234', 'available'),
+    (5, 'Grace Lee', 'gracelee@example.com', '6666666666', 'QR567', 'busy'),
+    (2, 'Kevin Lee', 'kevinlee@example.com', '9999999999', 'ST890', 'available');
 
-INSERT INTO Car (type_id, driver_id) VALUES
-(1, 1),
-(2, 2),
-(3, 3);
+INSERT INTO Car (type_id, driver_id)
+VALUES 
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5),
+    (1, 6),
+    (3, 7),
+    (4, 8),
+    (5, 9),
+    (2, 10);
 
 INSERT INTO Rides (car_id, ride_payment_id, pickup_location, dropoff_location, booking_time, ride_status, rating, description)
 VALUES 

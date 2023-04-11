@@ -12,7 +12,7 @@ public class Utility {
     public int Login(String email, String password, String authority) {
         try {
             String query = "select * from User where email = '" + email + "' and password = '" + password
-                    + "' and authority = '" + authority + "'";
+                    + "' and authority = '" + authority + "';";
             ResultSet rs = obj.stm.executeQuery(query);
             if (rs.next()) {
                 System.out.println("Login Successful");
@@ -68,12 +68,10 @@ public class Utility {
         return 0;
     }
 
-    public int RegisterDriver(int type_id, String name, String email, String phone, String license_plate,
-            String status) {
+    public int RegisterDriver(int type_id, String name, String email, String phone, String license_plate) {
         try {
             String q1 = "insert into driver(type_id, name, email, phone_number, license_plate, status) values("
-                    + type_id + ",'" + name + "','" + email + "','" + phone + "','" + license_plate + "','" + status
-                    + "');";
+                    + type_id + ",'" + name + "','" + email + "','" + phone + "','" + license_plate + "','available');";
             int aa = obj.stm.executeUpdate(q1);
             if (aa == 1) {
                 JOptionPane.showMessageDialog(null, "Account Created Successfully");
@@ -115,6 +113,22 @@ public class Utility {
             System.out.println(e);
         }
         return 0;
+    }
+
+    public void UpdateDriver(String name, String email, String phone, String plate, String status) {
+        try {
+            String q1 = "update driver set name = '" + name + "', email = '" + email + "', phone_number = '" + phone
+                    + "', license_plate = '" + plate + "', status = '" + status + "' where phone_number = '" + phone
+                    + "';";
+            int aa = obj.stm.executeUpdate(q1);
+            if (aa == 1) {
+                JOptionPane.showMessageDialog(null, "Account Updated Successfully");
+            } else {
+                JOptionPane.showMessageDialog(null, "Please enter valid details");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
 }
