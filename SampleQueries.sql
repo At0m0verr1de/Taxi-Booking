@@ -121,5 +121,3 @@ BEGIN
     INNER JOIN Car ON Driver.driver_id = Car.driver_id
     INNER JOIN Car_Type ON Car.type_id = Car_Type.type_id;
 END;
-
-

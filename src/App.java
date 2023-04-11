@@ -23,6 +23,7 @@ public class App extends JFrame implements ActionListener {
         b2.addActionListener(this);
         f.add(b2);
 
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.getContentPane();
         f.setVisible(true);
         f.setSize(350, 150);
@@ -41,7 +42,7 @@ public class App extends JFrame implements ActionListener {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new App();
+                new AdminHome();
             }
         });
     }
